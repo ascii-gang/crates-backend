@@ -6,20 +6,15 @@ const find = async (name: string) => {
     let result: any = [];
     for (let crate of query.crates) {
       let crateTemplate = {
-        type: "article",
         id: crate["id"],
         title: crate["name"],
         description: crate["description"],
-        input_message_content: {
-          message_text: `<b>Package name</b>: ${
-            crate["name"]
-          } \n<b>Version</b>: ${crate["newest_version"]} \n<b>Link</b>: ${
-            crate["documentation"]
-          }`,
-          parse_mode: "HTML",
-          disable_web_page_preview: true,
-        },
+        version: crate["newest_version"],
         url: crate["documentation"],
+        links: crate["links"],
+        downloads: crate["downloads"],
+        stable_version: crate["max_stable_version"],
+        repo: crate["repository"],
       };
 
       result.push(crateTemplate);
