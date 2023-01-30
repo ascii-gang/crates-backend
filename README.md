@@ -17,4 +17,4 @@ uchun `base64`
 
 ### Natija
 
-![image](https://i.imgur.com/wNEPzYm.png)
+![image](https://i.imgur.com/jbSlkbp.png)
